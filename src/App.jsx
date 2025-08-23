@@ -8,6 +8,7 @@ import Recipe from "./pages/Recipe";
 import RecipeDetails from "./pages/RecipeDetails";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+
 function App() {
   return (
     <Routes>
