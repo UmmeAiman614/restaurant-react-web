@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/common/Hero";
 import Reservation from "../components/common/Reservation";
-import InstagramSubscribe from "../components/common/InstagramSubscribe";
+import InstagramSubscribe from "../components/common/InstagramSubscribe ";
 
 const ReservationPage = () => {
     return (

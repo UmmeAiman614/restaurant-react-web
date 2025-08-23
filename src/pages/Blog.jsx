@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Search, Folder, FileText, BookOpen } from "lucide-react";
 import Hero from "../components/common/Hero";
-import InstagramSubscribe from "../components/common/InstagramSubscribe"; // removed extra space
+import InstagramSubscribe from "../components/common/InstagramSubscribe ";
 
 const blogPosts = [
   {

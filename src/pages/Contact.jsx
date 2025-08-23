@@ -1,7 +1,7 @@
 import React from "react";
 import { MapPin, Mail, Phone, Facebook, Twitter, Instagram } from "lucide-react";
 import Hero from "../components/common/Hero";
-import InstagramSubscribe from "../components/common/InstagramSubscribe"; // removed extra space
+import InstagramSubscribe from "../components/common/InstagramSubscribe ";
 
 const Contact = () => {
   return (

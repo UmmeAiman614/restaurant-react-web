@@ -5,8 +5,7 @@ import AboutService from "../components/aboutUs/AboutService";
 import AboutTeam from "../components/aboutUs/AboutTeam";
 import Menu from "../components/common/Menu";
 import QuoteSlider from "../components/common/QuoteSlider";
-import InstagramSubscribe from "../components/common/InstagramSubscribe";
-
+import InstagramSubscribe from "../components/common/InstagramSubscribe ";
 const AboutUs = () => {
     return (
         <>

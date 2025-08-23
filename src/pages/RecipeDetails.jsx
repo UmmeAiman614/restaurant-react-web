@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
 import Hero from "../components/common/Hero";
 import FeaturedRecipe from "../components/common/FeaturedRecipe";
-import InstagramSubscribe from "../components/common/InstagramSubscribe";
-
+import InstagramSubscribe from "../components/common/InstagramSubscribe ";
 const recipes = [
   {
     id: 1,

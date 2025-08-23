@@ -5,8 +5,7 @@ import Menu from "../components/common/Menu";
 import OverlayMenu from "../components/menu/OverlayMenu";
 import GridMenu from "../components/menu/GridMenu";
 import TileMenu from "../components/menu/TileMenu";
-import InstagramSubscribe from "../components/common/InstagramSubscribe"; // removed trailing space
-
+import InstagramSubscribe from "../components/common/InstagramSubscribe ";
 const MenuPage = () => {
   // Sample menu items dataset
   const menuItems = [

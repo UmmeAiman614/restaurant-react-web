@@ -12,7 +12,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center gap-3">
         <img
-          src="/assets/nav-logo.png"
+          src={`${import.meta.env.BASE_URL}assets/nav-logo.png`}
           alt="Logo"
           className="h-12 w-auto object-contain"
         />
