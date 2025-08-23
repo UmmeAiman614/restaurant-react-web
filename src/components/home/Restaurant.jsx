@@ -5,9 +5,9 @@ const Restaurant = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    "/assets/restaurant1.png",
-    "/assets/restaurant2.png",
-    "/assets/restaurant3.png",
+    "restaurant1.png",
+    "restaurant2.png",
+    "restaurant3.png",
   ];
 
   return (
@@ -23,7 +23,7 @@ const Restaurant = () => {
           <div className="grid grid-rows-2 gap-4">
             {/* Top image */}
             <img
-              src={images[0]}
+              src={`${import.meta.env.BASE_URL}assets/${images[0]}`} // ✅ updated
               alt="Restaurant 1"
               className="w-full h-64 object-cover rounded-xl shadow-md cursor-pointer hover:opacity-90 transition"
               onClick={() => setSelectedImage(images[0])}
@@ -34,7 +34,7 @@ const Restaurant = () => {
               {images.slice(1).map((img, i) => (
                 <img
                   key={i}
-                  src={img}
+                  src={`${import.meta.env.BASE_URL}assets/${img}`} // ✅ updated
                   alt={`Restaurant ${i + 2}`}
                   className="w-full h-64 object-cover rounded-xl shadow-md cursor-pointer hover:opacity-90 transition"
                   onClick={() => setSelectedImage(img)}
@@ -74,7 +74,7 @@ const Restaurant = () => {
           onClick={() => setSelectedImage(null)}
         >
           <img
-            src={selectedImage}
+            src={`${import.meta.env.BASE_URL}assets/${selectedImage}`} // ✅ updated
             alt="Preview"
             className="max-w-6xl max-h-[100vh] rounded-xl shadow-lg"
           />

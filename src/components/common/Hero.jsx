@@ -5,7 +5,9 @@ const Hero = ({ bgImage, heading, subheading }) => {
   return (
     <section
       className="relative h-72 md:h-[28rem] w-full bg-cover bg-center"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      style={{
+        backgroundImage: `url(${import.meta.env.BASE_URL}${bgImage})`, // ✅ updated
+      }}
     >
       {/* Greenish Overlay */}
       <div className="absolute inset-0 bg-forest/70"></div>

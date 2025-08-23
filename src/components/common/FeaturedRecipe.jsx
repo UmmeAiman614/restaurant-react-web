@@ -6,11 +6,11 @@ import "swiper/css/pagination";
 import { Star } from "lucide-react";
 
 const recipes = [
-  { id: 1, name: "Spaghetti Carbonara", img: "/assets/recipe1.jpg" },
-  { id: 2, name: "Grilled Salmon", img: "/assets/recipe2.jpg" },
-  { id: 3, name: "Chicken Biryani", img: "/assets/recipe3.jpg" },
-  { id: 4, name: "Veggie Pizza", img: "/assets/recipe4.jpg" },
-  { id: 5, name: "Beef Steak", img: "/assets/recipe5.jpg" },
+  { id: 1, name: "Spaghetti Carbonara", img: "recipe1.jpg" },
+  { id: 2, name: "Grilled Salmon", img: "recipe2.jpg" },
+  { id: 3, name: "Chicken Biryani", img: "recipe3.jpg" },
+  { id: 4, name: "Veggie Pizza", img: "recipe4.jpg" },
+  { id: 5, name: "Beef Steak", img: "recipe5.jpg" },
 ];
 
 const FeaturedRecipe = () => {
@@ -29,10 +29,10 @@ const FeaturedRecipe = () => {
           }}
           spaceBetween={20}
           breakpoints={{
-            320: { slidesPerView: 1 }, // mobile
-            640: { slidesPerView: 2 }, // small tablets
-            1024: { slidesPerView: 3 }, // tablets / small desktops
-            1280: { slidesPerView: 4 }, // large screens
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
           }}
           className="mt-8"
         >
@@ -41,7 +41,7 @@ const FeaturedRecipe = () => {
               <div className="bg-sand rounded-xl shadow-md p-4 flex flex-col items-center">
                 {/* Image */}
                 <img
-                  src={recipe.img}
+                  src={`${import.meta.env.BASE_URL}assets/${recipe.img}`} // ✅ updated for GitHub Pages
                   alt={recipe.name}
                   className="w-full h-40 object-cover rounded-lg"
                 />
@@ -80,14 +80,14 @@ const FeaturedRecipe = () => {
           .custom-pagination .swiper-pagination-bullet {
             width: 12px;
             height: 12px;
-            border: 2px solid #4A9782; /* teal border */
+            border: 2px solid #4A9782;
             border-radius: 50%;
             background: transparent;
             opacity: 1;
             transition: all 0.3s ease;
           }
           .custom-pagination .swiper-pagination-bullet-active {
-            background: #4A9782; /* teal fill */
+            background: #4A9782;
           }
         `}
       </style>

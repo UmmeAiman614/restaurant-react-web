@@ -5,14 +5,13 @@ import AboutService from "../components/aboutUs/AboutService";
 import AboutTeam from "../components/aboutUs/AboutTeam";
 import Menu from "../components/common/Menu";
 import QuoteSlider from "../components/common/QuoteSlider";
-import InstagramSubscribe from "../components/common/InstagramSubscribe ";
-
+import InstagramSubscribe from "../components/common/InstagramSubscribe";
 
 const AboutUs = () => {
     return (
         <>
             <Hero
-                bgImage="/assets/hero-bg.jpg"
+                bgImage={`${import.meta.env.BASE_URL}assets/hero-bg.jpg`} // ✅ updated path
                 heading="About Us"
                 subheading="Explore our delicious starters, breakfast, lunch, dinner, and desserts"
             />

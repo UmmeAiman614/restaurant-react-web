@@ -26,7 +26,7 @@ const Footer = () => {
           <h2 className="text-xl font-bold text-forest mb-4">Recent Posts</h2>
           <div className="flex items-center gap-3 mb-4">
             <img
-              src="/assets/footer-post1.png"
+              src={`${import.meta.env.BASE_URL}assets/footer-post1.png`} // ✅ updated
               alt="Post 1"
               className="w-16 h-16 object-cover rounded-md"
             />
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           <div className="flex items-center gap-3">
             <img
-              src="/assets/footer-post2.png"
+              src={`${import.meta.env.BASE_URL}assets/footer-post2.png`} // ✅ updated
               alt="Post 2"
               className="w-16 h-16 object-cover rounded-md"
             />

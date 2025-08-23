@@ -4,17 +4,17 @@ import React from "react";
 const FeaturesSection = () => {
   const features = [
     {
-      img: "/assets/feature1.png",
+      img: "feature1.png",
       title: "Fresh Ingredients",
       desc: "We use only the freshest ingredients to bring authentic flavors to your table."
     },
     {
-      img: "/assets/feature2.png",
+      img: "feature2.png",
       title: "Cozy Ambience",
       desc: "A warm and inviting environment where you can enjoy every meal with comfort."
     },
     {
-      img: "/assets/feature3.png",
+      img: "feature3.png",
       title: "Fast Service",
       desc: "Our team ensures quick and friendly service for a delightful dining experience."
     }
@@ -24,7 +24,7 @@ const FeaturesSection = () => {
     <section
       className="relative py-20"
       style={{
-        backgroundImage: "url('/assets/features-bg.jpg')",
+        backgroundImage: `url(${import.meta.env.BASE_URL}assets/features-bg.jpg)`, // ✅ updated
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -45,7 +45,7 @@ const FeaturesSection = () => {
               className="bg-cream rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition"
             >
               <img
-                src={feature.img}
+                src={`${import.meta.env.BASE_URL}assets/${feature.img}`} // ✅ updated
                 alt={feature.title}
                 className="w-full h-48 object-cover transform transition-transform duration-500 hover:scale-105"
               />

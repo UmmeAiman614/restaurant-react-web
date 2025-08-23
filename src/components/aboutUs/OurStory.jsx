@@ -1,7 +1,6 @@
 // src/components/about/OurStory.jsx
 import React from "react";
 import { Link } from "react-router-dom"; // if you use routing
-// If Menu is on the same page as an anchor, we'll use <a href="#menu"> instead
 
 const OurStory = () => {
   return (
@@ -10,7 +9,7 @@ const OurStory = () => {
         {/* Left Side Image */}
         <div>
           <img
-            src="/assets/about-story.png" // replace with your image path
+            src={`${import.meta.env.BASE_URL}assets/about-story.png`} // ✅ updated for GitHub Pages
             alt="Our Story"
             className="shadow-lg object-cover w-full h-[500px]"
           />

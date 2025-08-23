@@ -4,8 +4,10 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section
-      className="relative h-[80vh] w-full bg-cover bg-center" 
-      style={{ backgroundImage: "url('/assets/home-hero-bg.jpg')" }}
+      className="relative h-[80vh] w-full bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${import.meta.env.BASE_URL}assets/home-hero-bg.jpg)`, // ✅ updated
+      }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-forest/90"></div>
@@ -14,9 +16,9 @@ const HeroSection = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
         {/* Logo */}
         <img
-          src="/assets/home-hero-logo.png"
+          src={`${import.meta.env.BASE_URL}assets/home-hero-logo.png`} // ✅ updated
           alt="Delizio Logo"
-          className="w-48 h-48 mb-6 object-contain"  // increased size
+          className="w-48 h-48 mb-6 object-contain"
         />
 
         {/* Heading */}

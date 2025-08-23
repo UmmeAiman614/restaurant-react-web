@@ -22,7 +22,7 @@ const QuoteSlider = () => {
     <section
       className="relative py-24 bg-fixed bg-forest/80 flex items-center justify-center"
       style={{
-        backgroundImage: "url('/assets/restaurant1.png')",
+        backgroundImage: `url(${import.meta.env.BASE_URL}assets/restaurant1.png)`, // ✅ updated
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

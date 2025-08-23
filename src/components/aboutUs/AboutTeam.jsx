@@ -5,22 +5,22 @@ const team = [
   {
     name: "John Doe",
     role: "Founder & CEO",
-    img: "/assets/about-team1.png", // 👈 your actual image paths
+    img: "about-team1.png",
   },
   {
     name: "Sarah Smith",
     role: "Head Chef",
-    img: "/assets/about-team2.png",
+    img: "about-team2.png",
   },
   {
     name: "Michael Johnson",
     role: "Event Manager",
-    img: "/assets/about-team3.png",
+    img: "about-team3.png",
   },
   {
     name: "Emily Brown",
     role: "Marketing Lead",
-    img: "/assets/about-team4.png",
+    img: "about-team4.png",
   },
 ];
 
@@ -42,7 +42,7 @@ const AboutTeam = () => {
           <div key={index} className="text-center">
             {/* Image */}
             <img
-              src={member.img}
+              src={`${import.meta.env.BASE_URL}assets/${member.img}`} // ✅ updated
               alt={member.name}
               className="w-60 h-60 object-cover rounded-full mx-auto mb-4 shadow-md"
             />

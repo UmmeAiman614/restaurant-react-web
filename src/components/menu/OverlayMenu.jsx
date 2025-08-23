@@ -5,9 +5,10 @@ const OverlayMenu = ({ menuItems }) => {
   const categories = ["All", "Starters", "Breakfast", "Lunch", "Dinner", "Desserts"];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredItems = selectedCategory === "All"
-    ? menuItems
-    : menuItems.filter(item => item.category === selectedCategory);
+  const filteredItems =
+    selectedCategory === "All"
+      ? menuItems
+      : menuItems.filter((item) => item.category === selectedCategory);
 
   return (
     <section className="py-16 bg-cream text-textdark">
@@ -22,7 +23,7 @@ const OverlayMenu = ({ menuItems }) => {
 
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {categories.map(cat => (
+          {categories.map((cat) => (
             <button
               key={cat}
               className={`px-4 py-2 rounded-full font-medium ${
@@ -38,11 +39,14 @@ const OverlayMenu = ({ menuItems }) => {
         {/* Overlay Menu Items */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {filteredItems.map((item, idx) => (
-            <div key={idx} className="relative cursor-pointer group animate-menuFadeIn shadow-md">
+            <div
+              key={idx}
+              className="relative cursor-pointer group animate-menuFadeIn shadow-md"
+            >
               {/* Image */}
               <div className="overflow-hidden rounded-xl">
                 <img
-                  src={item.img}
+                  src={`${import.meta.env.BASE_URL}assets/${item.img}`} // ✅ updated
                   alt={item.name}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                 />

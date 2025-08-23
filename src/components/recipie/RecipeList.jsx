@@ -6,42 +6,42 @@ const recipes = [
   {
     id: 1,
     name: "Spaghetti Carbonara",
-    img: "/assets/recipe1.jpg",
+    img: "recipe1.jpg",
     rating: 5,
     description: "A rich and creamy Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
   },
   {
     id: 2,
     name: "Grilled Salmon",
-    img: "/assets/recipe2.jpg",
+    img: "recipe2.jpg",
     rating: 4,
     description: "Perfectly grilled salmon fillets with lemon butter sauce for a light, healthy meal.",
   },
   {
     id: 3,
     name: "Chicken Biryani",
-    img: "/assets/recipe3.jpg",
+    img: "recipe3.jpg",
     rating: 5,
     description: "A flavorful South Asian rice dish with spiced chicken, saffron, and aromatic herbs.",
   },
   {
     id: 4,
     name: "Veggie Pizza",
-    img: "/assets/recipe4.jpg",
+    img: "recipe4.jpg",
     rating: 4,
     description: "Delicious pizza topped with fresh vegetables, cheese, and a crispy crust.",
   },
   {
     id: 5,
     name: "Chocolate Cake",
-    img: "/assets/recipe5.jpg",
+    img: "recipe5.jpg",
     rating: 5,
     description: "Moist and fluffy chocolate cake layered with rich chocolate frosting.",
   },
   {
     id: 6,
     name: "Caesar Salad",
-    img: "/assets/recipe6.jpg",
+    img: "recipe6.jpg",
     rating: 4,
     description: "Classic Caesar salad with crunchy croutons, creamy dressing, and parmesan cheese.",
   },
@@ -59,7 +59,7 @@ const RecipeList = () => {
             {/* Left Image */}
             <div className="md:w-1/2">
               <img
-                src={recipe.img}
+                src={`${import.meta.env.BASE_URL}assets/${recipe.img}`} // ✅ updated path
                 alt={recipe.name}
                 className="w-full h-full object-cover"
               />
@@ -75,9 +75,7 @@ const RecipeList = () => {
                   <Star
                     key={i}
                     size={18}
-                    className={
-                      i < recipe.rating ? "fill-teal text-teal" : "text-gray-300"
-                    }
+                    className={i < recipe.rating ? "fill-teal text-teal" : "text-gray-300"}
                   />
                 ))}
               </div>

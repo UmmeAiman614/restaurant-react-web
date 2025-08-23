@@ -5,9 +5,10 @@ const GridMenu = ({ menuItems }) => {
   const categories = ["All", "Starters", "Breakfast", "Lunch", "Dinner", "Desserts"];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredItems = selectedCategory === "All"
-    ? menuItems
-    : menuItems.filter(item => item.category === selectedCategory);
+  const filteredItems =
+    selectedCategory === "All"
+      ? menuItems
+      : menuItems.filter((item) => item.category === selectedCategory);
 
   return (
     <section className="py-20 bg-forest/10 text-textdark">
@@ -23,11 +24,13 @@ const GridMenu = ({ menuItems }) => {
 
         {/* Category Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {categories.map(cat => (
+          {categories.map((cat) => (
             <button
               key={cat}
               className={`px-4 py-2 rounded-full font-medium ${
-                selectedCategory === cat ? "bg-teal text-cream" : "bg-sand text-textdark"
+                selectedCategory === cat
+                  ? "bg-teal text-cream"
+                  : "bg-sand text-textdark"
               } hover:bg-teal hover:text-cream transition`}
               onClick={() => setSelectedCategory(cat)}
             >
@@ -39,9 +42,12 @@ const GridMenu = ({ menuItems }) => {
         {/* Grid Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {filteredItems.map((item, idx) => (
-            <div key={idx} className="bg-sand rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition animate-menuFadeIn">
+            <div
+              key={idx}
+              className="bg-sand rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition animate-menuFadeIn"
+            >
               <img
-                src={item.img}
+                src={`${import.meta.env.BASE_URL}assets/${item.img}`} // ✅ updated
                 alt={item.name}
                 className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
               />
