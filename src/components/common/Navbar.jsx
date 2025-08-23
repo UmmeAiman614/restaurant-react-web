@@ -19,14 +19,16 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex gap-6 font-medium items-center">
-        <Link to="/" className="hover:text-teal">Home</Link>
-        <Link to="/menu" className="hover:text-teal">Menu</Link>
-        <Link to="/reservation" className="hover:text-teal">Reservation</Link>
-        <Link to="/about" className="hover:text-teal">About Us</Link>
-        <Link to="/recipe" className="hover:text-teal">Recipe</Link>
-        <Link to="/blog" className="hover:text-teal">Blog</Link>
-        <Link to="/contact" className="hover:text-teal">Contact</Link>
+      <div className="hidden md:flex gap-6 font-medium items-center 
+                      overflow-x-auto overflow-y-auto max-h-24 scrollbar-thin 
+                      scrollbar-thumb-teal scrollbar-track-sand">
+        <Link to="/" className="hover:text-teal whitespace-nowrap">Home</Link>
+        <Link to="/menu" className="hover:text-teal whitespace-nowrap">Menu</Link>
+        <Link to="/reservation" className="hover:text-teal whitespace-nowrap">Reservation</Link>
+        <Link to="/about" className="hover:text-teal whitespace-nowrap">About Us</Link>
+        <Link to="/recipe" className="hover:text-teal whitespace-nowrap">Recipe</Link>
+        <Link to="/blog" className="hover:text-teal whitespace-nowrap">Blog</Link>
+        <Link to="/contact" className="hover:text-teal whitespace-nowrap">Contact</Link>
       </div>
 
       {/* Mobile Menu Button (Hamburger / Cross) */}
@@ -49,7 +51,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 w-full bg-sand text-textdark shadow-lg z-50"
           >
-            <div className="flex flex-col items-center gap-4 py-6 font-medium">
+            <div className="flex flex-col items-center gap-4 py-6 font-medium overflow-y-auto max-h-[70vh]">
               <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-teal">Home</Link>
               <Link to="/menu" onClick={() => setIsOpen(false)} className="hover:text-teal">Menu</Link>
               <Link to="/reservation" onClick={() => setIsOpen(false)} className="hover:text-teal">Reservation</Link>

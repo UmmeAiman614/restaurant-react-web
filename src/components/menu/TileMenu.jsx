@@ -47,7 +47,7 @@ const TileMenu = ({ menuItems }) => {
               {/* Image */}
               <div className="md:w-1/2 flex-shrink-0">
                 <img
-                  src={`${import.meta.env.BASE_URL}assets/${item.img}`} // ✅ updated
+                  src={item.img} // ✅ updated
                   alt={item.name}
                   className="w-full h-48 object-cover rounded-l-xl transition-transform duration-500 hover:scale-105"
                 />

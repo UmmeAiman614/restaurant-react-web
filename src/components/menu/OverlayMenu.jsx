@@ -46,7 +46,7 @@ const OverlayMenu = ({ menuItems }) => {
               {/* Image */}
               <div className="overflow-hidden rounded-xl">
                 <img
-                  src={`${import.meta.env.BASE_URL}assets/${item.img}`} // ✅ updated
+                  src={item.img}// ✅ updated
                   alt={item.name}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                 />

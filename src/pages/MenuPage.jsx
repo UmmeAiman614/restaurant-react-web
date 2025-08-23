@@ -9,49 +9,50 @@ import InstagramSubscribe from "../components/common/InstagramSubscribe ";
 const MenuPage = () => {
   // Sample menu items dataset
   const menuItems = [
-    {
-      name: "English Asparagus",
-      desc: "Asparagus, hens egg, toasted sunflower seed",
-      price: 14.95,
-      category: "Starters",
-      img: "/assets/menu1.jpg",
-    },
-    {
-      name: "Avocado Toast",
-      desc: "Sourdough, avocado, feta cheese",
-      price: 12.95,
-      category: "Breakfast",
-      img: "/assets/menu2.jpg",
-    },
-    {
-      name: "Grilled Chicken Salad",
-      desc: "Fresh greens, grilled chicken, vinaigrette",
-      price: 16.95,
-      category: "Lunch",
-      img: "/assets/menu3.jpg",
-    },
-    {
-      name: "Steak with Herbs",
-      desc: "Grilled steak, rosemary, garlic butter",
-      price: 22.95,
-      category: "Dinner",
-      img: "/assets/menu4.jpg",
-    },
-    {
-      name: "Chocolate Cake",
-      desc: "Rich chocolate cake with ganache",
-      price: 8.95,
-      category: "Desserts",
-      img: "/assets/menu5.jpg",
-    },
-    {
-      name: "Pancakes",
-      desc: "Stack of pancakes with maple syrup",
-      price: 10.95,
-      category: "Breakfast",
-      img: "/assets/menu6.jpg",
-    },
-  ];
+  {
+    name: "English Asparagus",
+    desc: "Asparagus, hens egg, toasted sunflower seed",
+    price: 14.95,
+    category: "Starters",
+    img: `${import.meta.env.BASE_URL}assets/menu1.jpg`,
+  },
+  {
+    name: "Avocado Toast",
+    desc: "Sourdough, avocado, feta cheese",
+    price: 12.95,
+    category: "Breakfast",
+    img: `${import.meta.env.BASE_URL}assets/menu2.jpg`,
+  },
+  {
+    name: "Grilled Chicken Salad",
+    desc: "Fresh greens, grilled chicken, vinaigrette",
+    price: 16.95,
+    category: "Lunch",
+    img: `${import.meta.env.BASE_URL}assets/menu3.jpg`,
+  },
+  {
+    name: "Steak with Herbs",
+    desc: "Grilled steak, rosemary, garlic butter",
+    price: 22.95,
+    category: "Dinner",
+    img: `${import.meta.env.BASE_URL}assets/menu4.jpg`,
+  },
+  {
+    name: "Chocolate Cake",
+    desc: "Rich chocolate cake with ganache",
+    price: 8.95,
+    category: "Desserts",
+    img: `${import.meta.env.BASE_URL}assets/menu5.jpg`,
+  },
+  {
+    name: "Pancakes",
+    desc: "Stack of pancakes with maple syrup",
+    price: 10.95,
+    category: "Breakfast",
+    img: `${import.meta.env.BASE_URL}assets/menu6.jpg`,
+  },
+];
+
 
   return (
     <>

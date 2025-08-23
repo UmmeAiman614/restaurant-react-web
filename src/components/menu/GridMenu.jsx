@@ -46,11 +46,12 @@ const GridMenu = ({ menuItems }) => {
               key={idx}
               className="bg-sand rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition animate-menuFadeIn"
             >
-              <img
-                src={`${import.meta.env.BASE_URL}assets/${item.img}`} // ✅ updated
-                alt={item.name}
-                className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
-              />
+             <img
+  src={item.img} // already contains import.meta.env.BASE_URL
+  alt={item.name}
+  className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
+/>
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-forest mb-2">{item.name}</h3>
                 <p className="text-sm mb-3">{item.desc}</p>
